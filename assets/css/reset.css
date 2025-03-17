@@ -1,0 +1,7 @@
+html{
+    color: @apply text-customBunker-950;
+}
+
+img{
+    display: block;
+}
