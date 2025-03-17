@@ -1,9 +1,13 @@
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
+    <LayoutsHeaderComponent />
+
+    <SectionsIndexIntroductionComponent />
+    <SectionsIndexNewLineUpComponent />
   </div>
 </template>
 
 <script setup></script>
 
-<style></style>
+<style lang="scss" scoped>
+</style>
