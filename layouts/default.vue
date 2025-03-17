@@ -1,5 +1,9 @@
 <template>
   <div>
-    <slot />
+    <LayoutsHeaderComponent />
+
+    <main>
+        <slot />
+    </main>
   </div>
 </template>

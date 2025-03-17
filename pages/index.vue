@@ -1,7 +1,5 @@
 <template>
   <div>
-    <LayoutsHeaderComponent />
-
     <SectionsIndexIntroductionComponent />
     <SectionsIndexNewLineUpComponent />
   </div>
