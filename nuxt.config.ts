@@ -13,14 +13,7 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/css/tailwind.css',
+    '@/assets/css/fonts.css',
+    '@/assets/css/reset.css',
   ],
-
-  googleFonts: {
-    families: {
-      Inter: [200, 300, 400, 500, 600, 700, 800, 900],
-    },
-
-    display: 'swap',
-    preconnect: true,
-  },
 })
