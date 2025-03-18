@@ -3,6 +3,9 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+
+    <UNotifications />
+    <UModals />
   </div>
 </template>
 
