@@ -9,7 +9,7 @@
 
     <img
       class="introduction__image"
-      src="/assets/images/backgrounds/powder.png"
+      src="/images/backgrounds/powder.png"
       alt="Imagem ilustrativa"
     />
   </section>

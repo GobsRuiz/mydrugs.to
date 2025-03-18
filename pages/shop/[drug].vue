@@ -2,7 +2,7 @@
   <div class="productPage max-w-[1300px] mx-auto box-border px-5">
     <div class="productPage__product grid gap-10 lg:grid-cols-[minmax(200px,300px)_minmax(350px,400px)_300px] sm:grid-cols-[minmax(280px,400px)_minmax(250px,300px)] grid-cols-1 lg:items-center lg:justify-between md:justify-center mt-7">
         <div class="productPage__product__image lg:block hidden lg:col-start-auto md:col-start-1">
-            <img class="w-full" src="/assets/images/drugs/grenade-pill.png" alt="Droga">
+            <img class="w-full" src="/images/drugs/grenade-pill.png" alt="Droga">
         </div>
 
         <div class="productPage__product__about col-span-1 lg:col-start-2 md:col-start-1 md:row-start-1 sm:max-w-max max-w-[300px]">
@@ -14,7 +14,7 @@
             <p class="text-customWhite-400 text-2xl font-bold mb-2">
                 Premium Line
             </p>
-            <img class="max-w-[120px] mb-2 pb-1" src="/assets/images/ratings.png" alt="rating">
+            <img class="max-w-[120px] mb-2 pb-1" src="/images/ratings.png" alt="rating">
             <p class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -m-1.5">
                 0.0024 BTC
             </p>

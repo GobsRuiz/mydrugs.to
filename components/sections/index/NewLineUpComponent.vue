@@ -12,22 +12,22 @@
       <div class="newLineup__image flex items-center justify-center mt-6 mb-5">
         <img
           class="newLineup__image__donaldPill"
-          src="/assets/images/drugs/donald-pill.png"
+          src="/images/drugs/donald-pill.png"
           alt="Imagem ilustrativa"
         />
         <img
           class="newLineup__image__grenadePill"
-          src="/assets/images/drugs/grenade-pill.png"
+          src="/images/drugs/grenade-pill.png"
           alt="Imagem ilustrativa"
         />
         <img
           class="newLineup__image__pinkPill"
-          src="/assets/images/drugs/pink-pill.png"
+          src="/images/drugs/pink-pill.png"
           alt="Imagem ilustrativa"
         />
         <img
           class="newLineup__image__explosion"
-          src="/assets/images/backgrounds/explosition-multicolor.png"
+          src="/images/backgrounds/explosition-multicolor.png"
           alt="Imagem ilustrativa"
         />
       </div>
