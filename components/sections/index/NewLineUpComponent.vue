@@ -1,7 +1,7 @@
 <template>
   <section class="newLineup bg-customWhite-100">
     <div class="max-w-[1300px] mx-auto box-border py-5 px-5">
-      <h1 class="text-center text-4xl font-bold relative z-10">
+      <h1 class="text-center text-4xl font-black relative z-10">
         Our explosive <br class="hidden sm:block" />
         new lineup.
       </h1>

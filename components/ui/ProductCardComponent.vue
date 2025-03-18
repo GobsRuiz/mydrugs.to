@@ -3,7 +3,7 @@
     <img class="max-w-[80px] max-h-[80px] h-max mr-7" :src="`/images/drugs/${props.product.img}`" alt="Imagem ilustrativa">
 
     <div class="productCard__infos">
-      <h3 class="text-customWhite-100 text-lg leading-5 font-bold mb-2" v-html="props.product.name.split(' ').join('<br>')">
+      <h3 class="text-customWhite-100 text-lg leading-5 font-black mb-2" v-html="props.product.name.split(' ').join('<br>')">
       </h3>
 
       <p class="text-customWhite-400 text-sm font-semibold italic">

@@ -1,6 +1,6 @@
 <template>
   <section class="faq max-w-[1300px] mx-auto box-border px-4">
-    <h1 class="text-center text-customWhite-100 text-4xl font-bold mb-8">
+    <h1 class="text-center text-customWhite-100 text-4xl font-black mb-8">
         Frequently Asked Questions
     </h1>
 

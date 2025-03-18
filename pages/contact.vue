@@ -1,6 +1,6 @@
 <template>
   <section class="contact">
-    <h1 class="text-center text-customWhite-100 text-4xl font-bold mb-8">
+    <h1 class="text-center text-customWhite-100 text-4xl font-black mb-8">
         Contact
     </h1>
 

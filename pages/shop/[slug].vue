@@ -15,7 +15,7 @@
           <div class="productPage__product__about col-span-1 lg:col-start-2 md:col-start-1 md:row-start-1 sm:max-w-max max-w-[300px]">
               <p v-if="product.new" class="text-customBlue-500 text-xs font-bold ml-1 -m-1">NEW</p>
               
-              <h1 class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -mb-1" v-html="product.name.split(' ').join('<br>')">
+              <h1 class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-black -mb-1" v-html="product.name.split(' ').join('<br>')">
               </h1>
               
               <p v-if="product.premiumLine" class="text-customWhite-400 text-2xl font-bold -mb-1">
@@ -37,7 +37,7 @@
           </div>
   
           <div class="productPage__product__buy border-2 border-customBorderColor-default rounded-lg box-border py-4 px-8 lg:h-full md:h-max lg:col-start-3 md:col-start-2 md:row-start-1 sm:max-w-max max-w-[300px]">
-              <h3 class="text-customWhite-100 lg:text-3xl text-2xl font-bold mb-3">
+              <h3 class="text-customWhite-100 lg:text-3xl text-2xl font-black mb-3">
                   Buy now
               </h3>
   
