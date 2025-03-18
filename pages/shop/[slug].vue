@@ -1,5 +1,11 @@
 <template>
   <div class="productPage max-w-[1300px] mx-auto box-border px-5 relative">
+    <div class="productPage__back">
+        <NuxtLink to="/shop" class="text-customWhite-100 text-sm absolute top-0 left-5">
+            Voltar
+        </NuxtLink>
+    </div>
+
     <div class="productPage__product grid gap-10 lg:grid-cols-[minmax(200px,300px)_minmax(350px,400px)_300px] sm:grid-cols-[minmax(280px,400px)_minmax(250px,300px)] grid-cols-1 lg:items-center lg:justify-between md:justify-center mt-7">
         <div class="productPage__product__image lg:block hidden lg:col-start-auto md:col-start-1">
             <img class="w-full" :src="`/images/drugs/${product.img}`" alt="Droga">
