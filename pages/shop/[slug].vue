@@ -1,25 +1,27 @@
 <template>
-  <div class="productPage max-w-[1300px] mx-auto box-border px-5">
+  <div class="productPage max-w-[1300px] mx-auto box-border px-5 relative">
     <div class="productPage__product grid gap-10 lg:grid-cols-[minmax(200px,300px)_minmax(350px,400px)_300px] sm:grid-cols-[minmax(280px,400px)_minmax(250px,300px)] grid-cols-1 lg:items-center lg:justify-between md:justify-center mt-7">
         <div class="productPage__product__image lg:block hidden lg:col-start-auto md:col-start-1">
-            <img class="w-full" src="/images/drugs/grenade-pill.png" alt="Droga">
+            <img class="w-full" :src="`/images/drugs/${product.img}`" alt="Droga">
         </div>
 
         <div class="productPage__product__about col-span-1 lg:col-start-2 md:col-start-1 md:row-start-1 sm:max-w-max max-w-[300px]">
-            <p class="text-customBlue-300 text-xs font-bold ml-1 -m-1">NEW</p>
-            <h1 class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -mb-1">
-                GRENADE <br>
-                PILL
+            <p v-if="product.new" class="text-customBlue-300 text-xs font-bold ml-1 -m-1">NEW</p>
+            
+            <h1 class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -mb-1" v-html="product.name.split(' ').join('<br>')">
             </h1>
-            <p class="text-customWhite-400 text-2xl font-bold mb-2">
+            
+            <p v-if="product.premiumLine" class="text-customWhite-400 text-2xl font-bold -mb-1">
                 Premium Line
             </p>
-            <img class="max-w-[120px] mb-2 pb-1" src="/images/ratings.png" alt="rating">
+
+            <img class="max-w-[120px] my-2 pt-1 pb-1" src="/images/ratings.png" alt="rating">
+
             <p class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -m-1.5">
-                0.0024 BTC
+                {{ product.btc }} BTC
             </p>
             <p class="text-customWhite-100 text-lg font-bold">
-                24.06 €
+                {{ product.euro }} €
             </p>
 
             <p class="text-customWhite-400 text-md font-semibold mt-3">
@@ -66,21 +68,59 @@
         </div>
     </div>
 
-    <div class="h-[1px] bg-customWhite-400 my-8"></div>
+    <div v-if="otherProducts && otherProducts.length > 0" class="h-[1px] bg-customWhite-400 my-8"></div>
 
-    <div class="grid lg:grid-cols-4 grid-cols-1 gap-6 px-6">
-        <UiProductCardComponent class="max-w-[300px]" />
-        <UiProductCardComponent class="max-w-[300px]" />
-        <UiProductCardComponent class="max-w-[300px]" />
-        <UiProductCardComponent class="max-w-[300px]" />
+    <div v-if="otherProducts && otherProducts.length > 0" class="grid lg:grid-cols-4 grid-cols-1 gap-6 px-6">
+        <NuxtLink
+            v-for="(otherProduct, index) in otherProducts"
+            :key="index"
+            :to="`/shop/${otherProduct.slug}`"
+        >
+            <UiProductCardComponent 
+                class="max-w-[300px]"
+                :product="otherProduct" 
+            />
+        </NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup>
-const route = useRoute();
+import { useProduct } from '~/composables/useProduct.js'
 
-console.log(route)
+const route = useRoute()
+const product = ref(null)
+const products = ref(null)
+const otherProducts = computed(() => products.value.filter((p) => p.new).slice(0, 4))
+const reqError = ref(null)
+
+try {
+    product.value = await useProduct(`/api/products/${route.params.slug}`)
+} 
+catch (error) {
+    reqError.value = error
+    console.log(error)
+
+    toast.add({
+        title: 'error',
+        description: error.statusMessage,
+        color: 'red'
+    })
+}
+
+try {
+  products.value = await useProducts('/api/products')
+} 
+catch (error) {
+    reqError.value = error
+    console.log(error)
+
+    toast.add({
+        title: 'error',
+        description: error.statusMessage,
+        color: 'red'
+    })
+}
 </script>
 
 <style lang="scss" scoped>

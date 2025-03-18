@@ -5,11 +5,16 @@
     </h1>
 
     <div v-if="products.length > 0" class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
-        <UiProductCardComponent 
-            v-for="(product, index) in products" :key="index"
-            class="sm:max-w-full max-w-[300px] mx-auto"
-            :product="product" 
-        />
+        <NuxtLink 
+            v-for="(product, index) in products" 
+            :key="index" 
+            :to="`/shop/${product.slug}`"
+        >
+            <UiProductCardComponent 
+                class="sm:max-w-full max-w-[300px] mx-auto"
+                :product="product" 
+            />
+        </NuxtLink>
     </div>
   </div>
 </template>
