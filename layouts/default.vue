@@ -2,8 +2,10 @@
   <div>
     <LayoutsHeaderComponent />
 
-    <main>
+    <main class="my-7">
         <slot />
     </main>
+
+    <LayoutsFooterComponent />
   </div>
 </template>

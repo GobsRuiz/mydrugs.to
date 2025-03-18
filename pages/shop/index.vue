@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[1300px] mx-auto mt-7 box-border px-4">
+  <div class="max-w-[1300px] mx-auto box-border px-4">
     <h1 class="sm:text-left text-center text-customWhite-100 text-4xl font-bold mb-8">
         Shop
     </h1>
