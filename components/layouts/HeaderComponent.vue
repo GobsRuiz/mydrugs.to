@@ -1,5 +1,5 @@
 <template>
-  <header class="header max-w-[1200px] mx-auto flex items-center justify-between box-border px-5 py-4">
+  <header class="header max-w-[1300px] mx-auto flex items-center justify-between box-border px-5 py-4">
     <NuxtLink to="/">
         <img src="/assets/images/logos/mydrugs.png" alt="Logo MyDrug" class="max-w-[40px]">
     </NuxtLink>
