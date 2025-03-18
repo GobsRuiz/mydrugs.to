@@ -10,7 +10,7 @@
         {{ props.product.btc }} BTC
       </p>
       
-      <img class="max-w-[70px]" src="/images/ratings.png" alt="rating">
+      <UiRatingComponent class="max-w-[70px] -mt-1" />
     </div>
   </div>
 </template>

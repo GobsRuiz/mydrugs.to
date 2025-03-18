@@ -1,8 +1,9 @@
 <template>
     <div class="productPage max-w-[1300px] mx-auto box-border px-5 relative">
       <div class="productPage__back">
-          <NuxtLink to="/shop" class="text-customWhite-100 text-sm absolute top-0 left-5">
-              Voltar
+          <NuxtLink to="/shop" class="hidden items-center text-customWhite-100 hover:text-customBlue-500 text-xs absolute top-0 left-5">
+            <UIcon name="material-symbols:arrow-back-rounded" class="w-4 h-4 mr-1" />
+            Voltar
           </NuxtLink>
       </div>
   
@@ -12,7 +13,7 @@
           </div>
   
           <div class="productPage__product__about col-span-1 lg:col-start-2 md:col-start-1 md:row-start-1 sm:max-w-max max-w-[300px]">
-              <p v-if="product.new" class="text-customBlue-300 text-xs font-bold ml-1 -m-1">NEW</p>
+              <p v-if="product.new" class="text-customBlue-500 text-xs font-bold ml-1 -m-1">NEW</p>
               
               <h1 class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -mb-1" v-html="product.name.split(' ').join('<br>')">
               </h1>
@@ -21,7 +22,7 @@
                   Premium Line
               </p>
   
-              <img class="max-w-[120px] my-2 pt-1 pb-1" src="/images/ratings.png" alt="rating">
+              <UiRatingComponent class="my-2 pt-1 pb-1" />
   
               <p class="text-customWhite-100 lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold -m-1.5">
                   {{ product.btc }} BTC
@@ -52,17 +53,17 @@
               </p>
   
               <div class="flex items-center justify-between my-4 pb-1">
-                  <button class="flex items-center border border-customBorderColor-default rounded-full p-2">
+                  <button class="flex items-center border border-customBorderColor-default hover:border-customBlue-500 rounded-full p-2">
                       <svg class="w-[30px] h-[30px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Edit / Remove_Minus"> <path id="Vector" d="M6 12H18" stroke="#f3efee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
                   </button>
   
-                  <button class="flex items-center border border-customBorderColor-default rounded-full p-2">
+                  <button class="flex items-center border border-customBorderColor-default hover:border-customBlue-500 rounded-full p-2">
                       <UIcon name="lets-icons:add-round" class="w-[30px] h-[30px] text-customWhite-100" />
                   </button>
               </div>
   
               <UButton color="transparent" class="block w-full mb-3 text-lg">
-                  Add to Cart
+                Add to Cart
               </UButton>
               <UButton color="primary" class="block w-full text-lg">
                   Check Out
