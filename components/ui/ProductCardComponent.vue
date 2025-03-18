@@ -1,22 +1,24 @@
 <template>
-  <div class="productCard flex items-center justify-center border-2 border-customWhite-600 rounded-lg py-4 px-5">
-    <img class="max-w-[80px] h-max mr-7" src="/assets/images/drugs/blue_pill.png" alt="Imagem ilustrativa">
+  <div class="productCard w-full flex items-center justify-center border-2 border-customWhite-600 rounded-lg py-4 px-5">
+    <img class="max-w-[80px] max-h-[80px] h-max mr-7" :src="`/images/drugs/${props.product.img}`" alt="Imagem ilustrativa">
 
     <div class="productCard__infos">
-        <h3 class="text-customWhite-100 text-lg leading-5 font-bold mb-2">
-            Red<br>
-            Heart
-        </h3>
-        <p class="text-customWhite-400 text-sm font-semibold italic">
-            0.0017 BTC
-        </p>
-        <img class="max-w-[70px]" src="/assets/images/ratings.png" alt="rating">
+      <h3 class="text-customWhite-100 text-lg leading-5 font-bold mb-2" v-html="props.product.name.split(' ').join('<br>')">
+      </h3>
+
+      <p class="text-customWhite-400 text-sm font-semibold italic">
+        {{ props.product.btc }} BTC
+      </p>
+      
+      <img class="max-w-[70px]" src="/images/ratings.png" alt="rating">
     </div>
   </div>
 </template>
 
 <script setup>
-
+const props = defineProps({
+  product: Object,
+})
 </script>
 
 <style lang="scss" scoped>
