@@ -52,6 +52,10 @@ export default <Partial<Config>> {
           800: '#3a3c3f',
           950: '#242528',
         },
+
+        customBorderColor: {
+          default: '#18272c',
+        },
       },
     },
   },

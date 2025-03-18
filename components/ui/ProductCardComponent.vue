@@ -1,5 +1,5 @@
 <template>
-  <div class="productCard w-full flex items-center justify-center border-2 border-customWhite-600 rounded-lg py-4 px-5">
+  <div class="productCard w-full flex items-center justify-center border-2 border-customBorderColor-default rounded-lg py-4 px-5">
     <img class="max-w-[80px] max-h-[80px] h-max mr-7" :src="`/images/drugs/${props.product.img}`" alt="Imagem ilustrativa">
 
     <div class="productCard__infos">
