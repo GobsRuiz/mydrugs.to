@@ -1,7 +1,7 @@
 <template>
   <header class="header max-w-[1300px] mx-auto flex items-center justify-between box-border px-5 py-4">
     <NuxtLink to="/">
-        <img src="/assets/images/logos/mydrugs.png" alt="Logo MyDrug" class="max-w-[40px]">
+        <img src="/images/logos/mydrugs.png" alt="Logo MyDrug" class="max-w-[40px]">
     </NuxtLink>
     
     <nav class="hidden sm:flex header__nav">
@@ -9,15 +9,15 @@
             Home
         </NuxtLink>
 
-        <NuxtLink class="header__nav__link" to="shop">
+        <NuxtLink class="header__nav__link" to="/shop">
             Shop
         </NuxtLink>
 
-        <NuxtLink class="header__nav__link" to="faq">
+        <NuxtLink class="header__nav__link" to="/faq">
             Faq
         </NuxtLink>
 
-        <NuxtLink class="header__nav__link" to="contact">
+        <NuxtLink class="header__nav__link" to="/contact">
             Contact
         </NuxtLink>
     </nav>
