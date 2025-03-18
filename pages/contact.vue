@@ -1,11 +1,11 @@
 <template>
   <section class="contact">
     <h1 class="text-center text-customWhite-100 text-4xl font-black mb-8">
-        Contact
+      Contact
     </h1>
 
     <p>
-        gobs.ruiz
+      gobs.ruiz
     </p>
   </section>
 </template>

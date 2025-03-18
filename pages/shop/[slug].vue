@@ -7,8 +7,8 @@
           </NuxtLink>
       </div>
   
-      <div class="productPage__product grid gap-10 lg:grid-cols-[minmax(200px,300px)_minmax(350px,400px)_300px] sm:grid-cols-[minmax(280px,400px)_minmax(250px,300px)] grid-cols-1 lg:items-center lg:justify-between md:justify-center mt-7">
-          <div class="productPage__product__image lg:block hidden lg:col-start-auto md:col-start-1">
+      <div class="productPage__product grid gap-10 lg:grid-cols-[minmax(200px,300px)_minmax(350px,400px)_300px] sm:grid-cols-[minmax(280px,400px)_minmax(250px,300px)] grid-cols-1 lg:items-center lg:justify-between md:justify-center mt-7 relative">
+          <div class="productPage__product__image lg:block lg:col-start-auto md:col-start-1">
               <img class="w-full" :src="`/images/drugs/${product.img}`" alt="Droga">
           </div>
   
@@ -36,7 +36,7 @@
               </p>
           </div>
   
-          <div class="productPage__product__buy border-2 border-customBorderColor-default rounded-lg box-border py-4 px-8 lg:h-full md:h-max lg:col-start-3 md:col-start-2 md:row-start-1 sm:max-w-max max-w-[300px]">
+          <div class="productPage__product__buy border-2 border-customBorderColor-default rounded-lg box-border py-4 px-8 lg:h-full md:h-max lg:col-start-3 md:col-start-2 md:row-start-1 sm:max-w-max max-w-[300px] sm:mx-0 mx-auto">
               <h3 class="text-customWhite-100 lg:text-3xl text-2xl font-black mb-3">
                   Buy now
               </h3>
@@ -131,5 +131,31 @@
   </script>
   
   <style lang="scss" scoped>
-  
+  .productPage{
+    &__product{
+        &__image{
+            @media(max-width: 1023px){
+                max-width: 130px;
+                position: absolute;
+                top: -15px;
+                left: 150px;
+            }
+            @media(max-width: 639px){
+                max-width: 220px;
+                position: absolute;
+                left: initial;
+                right: 0;
+            }
+            @media(max-width: 530px){
+                max-width: 180px;
+            }
+            @media(max-width: 420px){
+                max-width: 150px;
+            }
+            @media(max-width: 370px){
+                max-width: 130px;
+            }
+        }
+    }
+  }
   </style>
