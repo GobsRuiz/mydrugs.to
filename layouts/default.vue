@@ -2,7 +2,10 @@
   <div>
     <LayoutsHeaderComponent />
 
-    <main class="main my-7" :style="mainHeight">
+    <main 
+      :class="['main', pageIsHome ? '' : 'my-7']" 
+      :style="mainHeight"
+    >
         <slot />
     </main>
 
@@ -11,6 +14,9 @@
 </template>
 
 <script setup>
+const route = useRoute()
+const pageIsHome = computed(() => route.name === 'index')
+
 const screenWidth = ref(0)
 const mainHeight = computed(() => screenWidth.value > 991 ? { minHeight: '747px' } : {} )
 
