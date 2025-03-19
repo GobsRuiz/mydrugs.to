@@ -1,7 +1,15 @@
 <template>
-  <header class="header max-w-[1300px] mx-auto flex items-center justify-between box-border px-5 py-4">
+  <header class="header max-w-[1300px] mx-auto sm:flex items-center justify-between grid grid-cols-[100px,40px,100px] box-border px-5 py-4">
+    <div class="sm:hidden flex justify-start">
+        <UDropdown
+            :items="links"
+        >
+            <UButton icon="icon-park-outline:hamburger-button" color="transparent" variant="outline" />
+        </UDropdown>
+    </div>
+
     <NuxtLink class="animateText" to="/">
-        <img src="/images/logos/mydrugs.png" alt="Logo MyDrug" class="max-w-[40px]">
+        <img src="/images/logos/mydrugs.png" alt="Logo MyDrug" class="sm:max-w-[40px] max-w-[30px] sm:mx-0 mx-auto">
     </NuxtLink>
     
     <nav class="hidden sm:flex header__nav">
@@ -22,8 +30,8 @@
         </NuxtLink>
     </nav>
 
-    <div class="animateText header__rightContent">
-        <UButton color="transparent">
+    <div class="animateText header__rightContent flex justify-end">
+        <UButton color="transparent" class="sm:text-sm text-xs">
             LOGIN
         </UButton>
     </div>
@@ -33,6 +41,39 @@
 <script setup>
 import { animate, stagger } from "motion-v"
 
+
+
+const links = ref([
+    [
+        {
+            label: "Home",
+            to: '/',
+        },
+        {
+            label: "Shop",
+            to: '/shop',
+        },
+        {
+            label: "Faq",
+            to: '/faq',
+        },
+        {
+            label: "Contact",
+            to: '/contact',
+        },
+    ],
+    [
+        {
+            label: "GobsRuiz",
+            to: 'https://gobsruiz.com.br/',
+            target: '_blank'
+        },
+    ]
+])
+
+
+
+// Functions
 function framerMotion()
 {
   animate(".header .animateText", { opacity: [0, 1], y: [-20, 0], }, { delay: stagger(.05) });
