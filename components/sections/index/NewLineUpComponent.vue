@@ -1,15 +1,15 @@
 <template>
-  <section class="newLineup" style="background-color: #fff;">
+  <section class="newLineup overflow-hidden">
     <div class="max-w-[1300px] mx-auto box-border py-5 px-5">
-      <h1 class="animateText text-center text-customBunker-950 text-4xl font-black relative z-10">
+      <h1 class="animateText text-center text-customBunker-950 sm:text-4xl text-2xl  font-black relative z-10">
         Our explosive <br class="hidden sm:block" />
         new lineup.
       </h1>
-      <p class="animateText text-center text-customBunker-950 text-sm font-semibold mt-2 relative z-10">
+      <p class="animateText text-center text-customBunker-950 text-sm font-bold mt-2 relative z-10">
         For the best MDMA experience Ever
       </p>
 
-      <div class="newLineup__image flex items-center justify-center mt-6 mb-5">
+      <div class="newLineup__image flex items-center justify-center mt-10 mb-5">
         <img
           class="newLineup__image__donaldPill"
           src="/images/drugs/donald-pill.png"
@@ -30,13 +30,15 @@
         <img class="newLineup__image__explosion newLineup__image__explosion--image" src="/images/backgrounds/explosion-img.png">
       </div>
 
-      <UButton
-        color="link"
-        trailing-icon="i-lucide-arrow-right"
-        class="animateText shopNowBtn flex mx-auto relative z-10 mt-10"
-      >
-        Shop now
-      </UButton>
+      <NuxtLink to="/shop">
+        <UButton
+          color="link"
+          trailing-icon="i-lucide-arrow-right"
+          class="animateText shopNowBtn flex mx-auto relative z-10 sm:mt-24 mt-16"
+        >
+          Shop now
+        </UButton>
+      </NuxtLink>
 
       <p class="animateText text-center text-customBunker-950 text-sm font-bold relative z-10 pb-1">
         Save 20% off your first order.
@@ -63,55 +65,65 @@ onMounted(() => {
   
   setTimeout(() => {
     gif.style.display = 'none'
-  }, 2400);
+  }, 2450);
 })
 </script>
 
 <style lang="scss" scoped>
-.shopNowBtn{
-  text-shadow: 
-    0 0 1px rgba(0, 0, 0, 0.3), 
-    0 1px 1px rgba(0, 0, 0, 0.3),
-    0 -1px 1px rgba(0, 0, 0, 0.3),
-    1px 0px 1px rgba(0, 0, 0, 0.3),
-    -1px 0px 1px rgba(0, 0, 0, 0.3)
-  ;
-}
-
 .newLineup {
-  overflow: hidden;
+  background-color: #fff;
+
   &__image {
     position: relative;
 
     &__donaldPill,
     &__grenadePill,
     &__pinkPill {
+      max-width: 110px;
       position: relative;
       z-index: 3;
+      
+      @media(max-width: 639px){
+        max-width: 70px;
+      }
     }
 
     &__donaldPill {
-      max-width: 110px;
       top: 8px;
     }
 
     &__grenadePill {
-      max-width: 110px;
       z-index: 4;
     }
 
     &__pinkPill {
       max-width: 120px;
+
+      @media(max-width: 639px){
+        max-width: 80px;
+      }
     }
 
     &__explosion {
-      width: 800px;
-      height: 400px;
+      min-width: 800px;
+      height: 350px;
       position: absolute;
-      top: -140px;
+      top: -110px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
+
+      @media(max-width: 639px){
+        min-width: 500px;
+        height: 250px;
+        top: -80px;
+      }
+      @media(max-width: 370px){
+        // max-width: 500px;
+        // width: 100%;
+        // height: 250px;
+        // top: -80px;
+      }
       
       &--image{
         z-index: 1 !important;
