@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    preset: 'node-server', // Permite que as APIs do Nitro funcionem no servidor
+    preset: 'vercel',
   },
   
   modules: [
