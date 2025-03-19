@@ -73,6 +73,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .introduction{
+  
   &__dynamicText{
     min-height: 100px;
     box-sizing: border-box;

@@ -1,6 +1,6 @@
 <template>
   <section class="newLineup overflow-hidden">
-    <div class="max-w-[1300px] mx-auto box-border py-5 px-5">
+    <div class="max-w-[1300px] mx-auto box-border px-5 pb-4">
       <h1 class="animateText text-center text-customBunker-950 sm:text-4xl text-2xl  font-black relative z-10">
         Our explosive <br class="hidden sm:block" />
         new lineup.
@@ -72,6 +72,16 @@ onMounted(() => {
 <style lang="scss" scoped>
 .newLineup {
   background-color: #fff;
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  padding-top: 60px;
+
+  @media(max-width: 639px){
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    padding-top: 35px;
+  }
+  @media(max-width: 430px){
+    padding-top: 45px;
+  }
 
   &__image {
     position: relative;
@@ -94,6 +104,11 @@ onMounted(() => {
 
     &__grenadePill {
       z-index: 4;
+      margin: 0 45px;
+
+      @media(max-width: 639px){
+        margin: 0 25px;
+      }
     }
 
     &__pinkPill {
