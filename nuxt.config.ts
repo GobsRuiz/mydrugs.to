@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@pinia/nuxt',
     'motion-v/nuxt',
+    'nuxt-gtag',
   ],
 
   plugins: [],
@@ -24,4 +25,9 @@ export default defineNuxtConfig({
     '@/assets/css/fonts.css',
     '@/assets/css/reset.css',
   ],
+
+  gtag: {
+    id: 'G-CXRPC09RK3',
+    enabled: true,
+  },
 })
