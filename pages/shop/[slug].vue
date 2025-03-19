@@ -202,9 +202,9 @@ try {
 // Hooks
 onMounted(() => {
     // 
+    animate(".productPage .animateText", { opacity: [0, 1], y: [50, 0], }, { delay: stagger(.05) });
     animate(".productPage__product__image", { rotate: 360, }, { duration: .3, });
     animate(".productPage__product__image", { y: [10, -10, 10], }, { duration: 5, repeat: Infinity });
-    animate(".animateText", { opacity: [0, 1], y: [50, 0], }, { delay: stagger(.05) });
 
     // 
     animate(".otherProducts__product", { opacity: [0, 1], y: [50, 0] }, { delay: stagger(.05) });
