@@ -53,12 +53,11 @@ catch (error) {
 
 // Hooks
 onMounted(() => {
-  animate(".shop__products__product", { opacity: 1, y: [50, 0] }, { delay: stagger(.05) });
+  animate(".shop__products__product", { opacity: [0, 1], y: [50, 0] }, { delay: stagger(.05) });
 });
 </script>
 
 <style lang="scss" scoped>
 .shop__products__product{
-    opacity: 0;
 }
 </style>
