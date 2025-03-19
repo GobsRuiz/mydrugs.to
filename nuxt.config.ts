@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     title: 'MyDrugs',
     meta: [
       { name: 'description', content: "Discover MyDrugs, the website inspired by the famous series 'How to Sell Drugs Online (Fast)" },
-      { name: 'keywords', content: 'mydrugs, mydrugs 2.0, como vender drogas online, how to sell drugs online, série mydrugs, como vender drogas online série, netflix como vender drogas online' },
+      { name: 'keywords', content: 'mydrugs, mydrugs 2.0, como vender drogas online, how to sell drugs online, série mydrugs, como vender drogas online série, netflix como vender drogas online, gobsruiz, gobs.ruiz' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'gobs.ruiz' },
 
