@@ -9,7 +9,10 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/image',
     '@pinia/nuxt',
+    'motion-v/nuxt',
   ],
+
+  plugins: [],
 
   css: [
     '@/assets/css/tailwind.css',
