@@ -81,6 +81,10 @@ onMounted(() => {
     @media(max-width: 768px){
       min-height: 65px;
     }
+
+    @media(max-width: 639px){
+      min-height: 55px;
+    }
     
     &__text{
       height: 100px;
