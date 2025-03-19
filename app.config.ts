@@ -11,7 +11,7 @@ export default defineAppConfig({
         },
 
         link: {
-          solid: 'bg-transparent hover:bg-transparent text-customBlue-500 hover:text-customBlue-500 border-0 text-sm font-bold py-1 px-5'
+          solid: 'bg-transparent hover:bg-transparent text-customBlue-500 hover:text-customBlue-500 border-0 text-md font-black py-1 px-5'
         },
       },
     },
