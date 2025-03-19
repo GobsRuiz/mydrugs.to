@@ -10,6 +10,8 @@
 </template>
 
 <script setup>
+const useColor = useColorMode()
+useColor.preference = 'light'
 </script>
 
 <style lang="scss">
