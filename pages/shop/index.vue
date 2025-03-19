@@ -1,5 +1,5 @@
 <template>
-  <div class="shopPage max-w-[1300px] mx-auto box-border px-4">
+  <section class="shopPage max-w-[1300px] mx-auto box-border px-4">
     <h1 class="sm:text-left text-center text-customWhite-100 text-4xl font-black mb-8">
         Shop
     </h1>
@@ -17,7 +17,7 @@
             />
         </NuxtLink>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
