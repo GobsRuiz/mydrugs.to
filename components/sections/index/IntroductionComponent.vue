@@ -1,5 +1,5 @@
 <template>
-  <section class="introduction flex flex-col justify-center text-center box-border pt-7 pb-7 relative">
+  <section class="introduction flex flex-col justify-center text-center box-border pt-7 pb-7 relative overflow-hidden">
     <p class="animateText text-customWhite-400 text-lg font-bold">The new myDrugs</p>
     
     <h1 class="introduction__title animateText text-customWhite-100 md:text-8xl sm:text-6xl text-5xl md:leading-[85px] sm:leading-[65px] leading-[50px] font-black">
