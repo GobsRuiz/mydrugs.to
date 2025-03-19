@@ -1,28 +1,28 @@
 <template>
   <header class="header max-w-[1300px] mx-auto flex items-center justify-between box-border px-5 py-4">
-    <NuxtLink to="/">
+    <NuxtLink class="animateText" to="/">
         <img src="/images/logos/mydrugs.png" alt="Logo MyDrug" class="max-w-[40px]">
     </NuxtLink>
     
     <nav class="hidden sm:flex header__nav">
-        <NuxtLink class="header__nav__link" to="/">
+        <NuxtLink class="animateText header__nav__link" to="/">
             Home
         </NuxtLink>
 
-        <NuxtLink class="header__nav__link" to="/shop">
+        <NuxtLink class="animateText animateText header__nav__link" to="/shop">
             Shop
         </NuxtLink>
 
-        <NuxtLink class="header__nav__link" to="/faq">
+        <NuxtLink class="animateText header__nav__link" to="/faq">
             Faq
         </NuxtLink>
 
-        <NuxtLink class="header__nav__link" to="/contact">
+        <NuxtLink class="animateText header__nav__link" to="/contact">
             Contact
         </NuxtLink>
     </nav>
 
-    <div class="header__rightContent">
+    <div class="animateText header__rightContent">
         <UButton color="transparent">
             LOGIN
         </UButton>
@@ -31,7 +31,16 @@
 </template>
 
 <script setup>
+import { animate, stagger } from "motion-v"
 
+function framerMotion()
+{
+  animate(".header .animateText", { opacity: [0, 1], y: [-20, 0], }, { delay: stagger(.05) });
+}
+
+onMounted(() => {
+  framerMotion()
+})
 </script>
 
 <style lang="scss" scoped>
