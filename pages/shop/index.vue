@@ -55,6 +55,18 @@ catch (error) {
 onMounted(() => {
   animate(".shop__products__product", { opacity: [0, 1], y: [50, 0] }, { delay: stagger(.05) });
 });
+
+
+
+// SEO
+definePageMeta({
+  title: 'MyDrugs - Shop',
+  meta: [
+    { name: 'description', content: "Discover MyDrugs, the website inspired by the famous series 'How to Sell Drugs Online (Fast)" },
+    { property: 'og:title', content: 'MyDrugs - Shop' },
+    { property: 'og:description', content: "Discover MyDrugs, the website inspired by the famous series 'How to Sell Drugs Online (Fast)" },
+  ]
+})
 </script>
 
 <style lang="scss" scoped>
