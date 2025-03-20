@@ -1,7 +1,7 @@
 <template>
   <section class="newLineup overflow-hidden">
     <div class="max-w-[1300px] mx-auto box-border px-5 pb-4">
-      <h1 class="animateText text-center text-customBunker-950 sm:text-4xl text-2xl  font-black relative z-10">
+      <h1 class="animateText text-center text-customBunker-950 sm:text-4xl text-2xl font-black relative z-10">
         Our explosive <br class="hidden sm:block" />
         new lineup.
       </h1>

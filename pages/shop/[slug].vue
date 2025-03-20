@@ -1,5 +1,5 @@
 <template>
-  <div class="productPage max-w-[1300px] mx-auto box-border px-5 relative">
+  <div class="productPage max-w-[1300px] mx-auto box-border px-4 relative">
     <div class="productPage__back">
       <NuxtLink
         to="/shop"
