@@ -52,6 +52,6 @@ export default defineNuxtConfig({
 
   gtag: {
     id: 'G-CXRPC09RK3',
-    enabled: true,
+    enabled: false,
   },
 })
